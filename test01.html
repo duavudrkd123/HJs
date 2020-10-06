@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      var students = [];
+
+      students.push({이름:'윤인성', 국어:87, 수학:98, 영어:88, 과학:95});
+      students.push({이름:'염평강', 국어:82, 수학:96, 영어:88, 과학:95});
+      students.push({이름:'조영래', 국어:76, 수학:85, 영어:88, 과학:95});
+      students.push({이름:'김시무', 국어:88, 수학:64, 영어:88, 과학:95});
+      students.push({이름:'조그림자', 국어:64, 수학:52, 영어:88, 과학:95});
+      students.push({이름:'동광희', 국어:45, 수학:47, 영어:88, 과학:95});
+
+      for(var i in students) {
+      students[i].getSum = function () {
+      return this.국어+this.수학+this.영어+this.과학;
+    };
+
+    students[i].getAverage = function() {
+        return this.getSum()/4;
+    };
+}
+
+    var output = "이름\t총점\t평균\n";
+    console.log(output);    
+    for (var i in students) {
+        with(students[i]) {
+            output = 이름+ '\t' + getSum() + '\t' + getAverage() + '\n';
+             console.log(output);
+        }
+    }
+   // alert(output);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
